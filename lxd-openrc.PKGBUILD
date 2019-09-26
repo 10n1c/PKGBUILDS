@@ -1,3 +1,5 @@
+# Maintainer: 10n1c
+
 pkgname=lxd-openrc
 pkgver=3
 pkgrel=1
@@ -13,4 +15,5 @@ sha256sums=('SKIP')
 package() {
   cd "${srcdir}/${pkgname}"
   install -Dm 755 lxd-init "${pkgdir}/etc/init.d/lxd"
+  install -Dm 644 lxd-conf "${pkgdir}/etc/conf.d/lxd"
 }
