@@ -13,4 +13,5 @@ sha256sums=('SKIP')
 package() {
   cd "${srcdir}/${pkgname}"
   install -Dm 755 netdata-init "${pkgdir}/etc/init.d/netdata"
+  install -Dm 644 netdata-conf "${pkgdir}/etc/conf.d/netdata
 }
